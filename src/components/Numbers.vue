@@ -16,6 +16,7 @@
 
 <script>
 import AddNumber from "./AddNumber";
+
 export default {
   name: "numbers",
   components: { AddNumber },

@@ -8,6 +8,7 @@
 
 <script>
 import Numbers from "./Numbers";
+import { mapGetters } from "vuex";
 export default {
   name: "sum",
   components: { Numbers },
@@ -15,12 +16,7 @@ export default {
     return {};
   },
   computed: {
-    sum() {
-      return this.$store.getters.sum;
-    },
-    totalNumbers() {
-      return this.$store.getters.totalNumbers;
-    }
+    ...mapGetters(["sum", "totalNumbers"])
   }
 };
 </script>
